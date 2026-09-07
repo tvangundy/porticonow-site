@@ -6,7 +6,7 @@ Essay site for [porticonow.com](https://porticonow.com) — a plain case for kee
 
 - Essay copy: `index.html`
 - Layout and typography: `styles.css`
-- Brand mark: `logo.png`; tab icons: `favicon-*.png`, `apple-touch-icon.png`, `apple-touch-icon-152.png`, `icon-192.png`, `icon-512.png`; PWA manifest: `manifest.webmanifest` (Add to Home Screen on iOS/Android).
+- Brand mark: `logo.png`; tab icons: `favicon.ico`, `favicon.svg`, `favicon-*.png`, `apple-touch-icon.png`, `apple-touch-icon-152.png`, `icon-192.png`, `icon-512.png`; PWA manifest: `manifest.webmanifest` (Add to Home Screen on iOS/Android). Browsers also fetch `/favicon.ico` directly — keep it at repo root.
 
 No build tools. Open `index.html` in a browser to preview.
 
