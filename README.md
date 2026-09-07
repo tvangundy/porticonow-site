@@ -12,12 +12,10 @@ No build tools. Open `index.html` in a browser to preview.
 
 ## Publish on GitHub Pages
 
-1. Repository: `tvangundy/porticonow-site` (private), branch `main`.
+1. Repository: `tvangundy/porticonow-site` (public), branch `main`.
 2. **Settings → Pages** → Deploy from a branch → `main` / `/(root)`.
 3. **Custom domain:** `porticonow.com` (keep the `CNAME` file in the repo).
 4. After DNS is healthy, enable **Enforce HTTPS**.
-
-> **Note:** GitHub Pages on private repos requires a paid GitHub plan (Pro, Team, or Enterprise). If Pages is unavailable on the private repo, alternatives: make the repo public (site content is not secret), use Cloudflare Pages, or serve static files from the edge public cluster.
 
 ## GoDaddy DNS for porticonow.com
 
