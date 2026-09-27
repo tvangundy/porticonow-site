@@ -1,0 +1,24 @@
+# https://taskfile.dev
+# Static GitHub Pages site for porticonow.com. No build step.
+version: "3"
+
+tasks:
+  default:
+    desc: porticonow-site banner
+    silent: true
+    cmds:
+      - |
+        echo "porticonow-site — essay site for porticonow.com"
+        echo ""
+        echo "  task preview    — http://localhost:4322"
+        echo ""
+        echo "No build. Edit index.html and styles.css, then refresh the browser."
+
+  preview:
+    desc: Preview the static site at http://localhost:4322
+    cmds:
+      - |
+        set -euo pipefail
+        PORT="{{.PORT | default "4322"}}"
+        echo "Preview http://localhost:${PORT}"
+        exec python3 -m http.server "${PORT}" --bind 0.0.0.0

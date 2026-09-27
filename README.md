@@ -9,7 +9,7 @@ Essay site for [porticonow.com](https://porticonow.com) — a plain case for kee
 - Brand mark: `logo.png`; tab icons: `favicon.ico`, `favicon.svg`, `favicon-*.png`, `apple-touch-icon.png`, `apple-touch-icon-152.png`, `icon-192.png`, `icon-512.png`; PWA manifest: `manifest.webmanifest` (Add to Home Screen on iOS/Android). Browsers also fetch `/favicon.ico` directly — keep it at repo root.
 - Invite deep links (Portico Mobile Camera → app): `.well-known/apple-app-site-association` and `.well-known/assetlinks.json` — keep in sync with **ws-website** / **porticoworks-site**.
 
-No build tools. Open `index.html` in a browser to preview.
+No build tools. Preview with `task preview` (http://localhost:4322). Override the port with `task preview PORT=8080`.
 
 ## Publish on GitHub Pages
 
