@@ -125,6 +125,23 @@ p { margin: 0 0 1.15rem; }
   color: var(--ink);
   font-weight: 600;
 }
+.essay-figure {
+  margin: 2.2rem 0 2.4rem;
+}
+.essay-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #000;
+}
+.essay-figure figcaption {
+  margin-top: 12px;
+  font-size: .78rem;
+  letter-spacing: .02em;
+  color: var(--muted);
+}
 
 .essay-cta {
   margin-top: 56px;
