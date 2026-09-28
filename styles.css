@@ -27,7 +27,16 @@ a { color: inherit; }
 .brand-cluster {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+}
+.wordmark-logo {
+  display: inline-flex;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.wordmark-logo:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
 }
 .brand-back {
   display: inline-flex;
