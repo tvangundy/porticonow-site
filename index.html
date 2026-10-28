@@ -206,6 +206,33 @@
     </footer>
 
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      // Home-screen web app (display:standalone) drops same-window links to
+      // other sites. Open those in the browser. Portico Mobile keeps them in
+      // its own WebView, which follows normal navigations.
+      (function () {
+        var standalone = window.navigator.standalone === true ||
+          (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches);
+        if (!standalone) return;
+        if (/PorticoMobile\//.test(navigator.userAgent || "")) return;
+        document.addEventListener("click", function (event) {
+          var node = event.target;
+          while (node && node.nodeName !== "A") node = node.parentNode;
+          if (!node || !node.href) return;
+          var url;
+          try { url = new URL(node.href, location.href); } catch (e) { return; }
+          var offSite = url.origin !== location.origin ||
+            url.protocol === "mailto:" || url.protocol === "tel:";
+          if (!offSite) return;
+          event.preventDefault();
+          if (url.protocol === "mailto:" || url.protocol === "tel:") {
+            location.href = node.href;
+            return;
+          }
+          window.open(node.href, "_blank", "noopener");
+        }, true);
+      })();
+    </script>
     <script src="diagram/agents.js" defer></script>
   </body>
 </html>
